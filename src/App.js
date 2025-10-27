@@ -3,11 +3,11 @@ import './App.css';
 import styled from 'styled-components';
 
 const SimpleButton = styled.button`
-color:white;
-background-color:green;
+   color:white;
+   background-color:green;
 `;
 const LargeButton = styled(SimpleButton)`
-  font-size:50px;
+   font-size:50px;
   `;
   const ReactButton = props => {
     console.log('props', props);
@@ -17,8 +17,8 @@ const LargeButton = styled(SimpleButton)`
     font-size:50px;
   `;
   const PrimaryButton = styled.button`
-  color:${props=>props.primary ? 'white' : 'black'};
-  
+    color:${props=>props.primary ? 'white' : 'black'};
+    background-color:${props=>props.primary ? 'blue' : 'grey'};
   `;
 function App() {
   return (
