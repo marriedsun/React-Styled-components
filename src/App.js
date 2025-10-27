@@ -17,15 +17,8 @@ const LargeButton = styled(SimpleButton)`
     font-size:50px;
   `;
   const PrimaryButton = styled.button`
-  color:${function(props){
-    if(props.primary){
-      return 'white';
-     } else {
-        return 'black';
-      }
-      
-    }
-  }}
+  color:${props=>props.primary ? 'white' : 'black'};
+  
   `;
 function App() {
   return (
