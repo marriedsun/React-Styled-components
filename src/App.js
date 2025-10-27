@@ -16,6 +16,17 @@ const LargeButton = styled(SimpleButton)`
   const ReactLargeButton = styled(ReactButton)`
     font-size:50px;
   `;
+  const PrimaryButton = styled.button`
+  color:${function(props){
+    if(props.primary){
+      return 'white';
+     } else {
+        return 'black';
+      }
+      
+    }
+  }}
+  `;
 function App() {
   return (
     <div>
@@ -23,6 +34,8 @@ function App() {
      <LargeButton>Large</LargeButton>
      <ReactButton>React</ReactButton>
      <ReactLargeButton>React Large</ReactLargeButton>
+     <PrimaryButton>Normal</PrimaryButton>
+     <PrimaryButton primary>Primary</PrimaryButton>  
     </div>
   );
 }
